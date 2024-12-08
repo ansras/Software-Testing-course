@@ -16,8 +16,12 @@ jobs:
       with:
         node-version: 22
     - run: npm install
-    - run: nvm --version
-    - run: node --version
+    - run: echo "Current working directory:"
+    - run: pwd
+    - run: echo "Contents of current directory:"
+    - run: ls -la
+    - run: echo "Node dependencies:"
+    - run: npm list
     - run: npm run coverage
       env:
         COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
