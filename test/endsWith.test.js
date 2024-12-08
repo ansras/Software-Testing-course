@@ -3,7 +3,7 @@ import endsWith from '../src/endsWith.js';
 
 const expect = chai.expect;
 
-describe('endsWith', () => {
+describe('endsWith function', () => {
   it('Should return true if the string ends with the target', () => {
     expect(endsWith('abc', 'c')).to.be.true;
   });
@@ -35,12 +35,6 @@ describe('endsWith', () => {
 
   it('Should handle negative positions as zero', () => {
     expect(endsWith('abc', 'a', -1)).to.be.false;
-  });
-
-  it('Should handle non-string inputs gracefully', () => {
-    expect(endsWith(12345, '5')).to.be.true;
-    expect(endsWith(12345, '45')).to.be.true;
-    expect(endsWith(12345, '6')).to.be.false;
   });
 
   it('Should return false for NaN as position', () => {

@@ -3,7 +3,7 @@ import capitalize from '../src/capitalize.js';
 
 const expect = chai.expect;
 
-describe('capitalize', () => {
+describe('capitalize function', () => {
     it('Should capitalize a single uppercase word', () => {
       expect(capitalize('FRED')).to.equal('Fred');
     });
