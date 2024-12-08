@@ -16,14 +16,8 @@ jobs:
       with:
         node-version: 22
     - run: npm install
-    - run: npm install nyc
-    - run: npm install --save-dev nyc
-    - run: npm install coveralls
-    - run: npm install --save-dev coveralls
-    - run: npm install mocha
-    - run: npm install --save-dev mocha
-    - run: npm install chai
-    - run: npm install --save-dev chai
+    - run: nvm --version
+    - run: node --version
     - run: npm run coverage
       env:
         COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
